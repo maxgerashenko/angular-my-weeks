@@ -4,5 +4,9 @@
 </p>
 
 <div class="grid-container">
-
+  <div 
+  [ngClass]="{'done': week < age}"
+  class="grid-item"
+  *ngFor="let week of weeks;">
+    . </div>
 </div>
