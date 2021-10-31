@@ -6,9 +6,16 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { WeeksGridModule } from '../weeks-grid/weeks-grid.module';
 import { VersionModule } from '../version/version.module';
+import { InputModule } from '../input/input.module';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, WeeksGridModule, VersionModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    WeeksGridModule,
+    VersionModule,
+    InputModule,
+  ],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],
 })
