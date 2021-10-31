@@ -1,24 +1,24 @@
 :host {
-  display: grid;
-  grid-template-columns: repeat(30, 15px [col-start]);
-  grid-template-rows: 1fr 1fr 1fr;
-  column-gap: 2px;
-  row-gap: 2px;
+  display: flex;
+  width: 100%;
   background: greenyellow;
-  justify-items: center;
-  align-items: center;
-  justify-content: space-evenly;
-  align-content: center;
-  grid-auto-flow: row;
-  transition: all 1s;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 4px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .grid-item {
+  --size: 12px;
+  flex: 0 0 var(--size);
+  height: var(--size);
   border: 1px solid black;
   background: yellow;
-  width: 15px;
-  height: 15px;
   text-align: center;
+  border-radius: 5px;
+  line-height: var(--size);
+  vertical-align: middle;
 }
 
 .grid-item.done {
