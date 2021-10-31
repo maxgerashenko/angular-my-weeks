@@ -1,26 +1,27 @@
 :host {
   display: flex;
   width: 100%;
-  background: greenyellow;
+  background: rgb(245, 247, 243);
   flex-wrap: wrap;
   justify-content: start;
   gap: 4px;
-  padding: 10px;
+  padding: 20px 50px;
   box-sizing: border-box;
 }
 
 .grid-item {
-  --size: 12px;
+  --size: 7px;
+  font-size: var(--size);
   flex: 0 0 var(--size);
   height: var(--size);
-  border: 1px solid black;
+  border: 1px solid rgb(193, 197, 173);
   background: yellow;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 2px;
   line-height: var(--size);
   vertical-align: middle;
 }
 
 .grid-item.done {
-  background: grey;
+  background: rgb(138, 137, 137);
 }
