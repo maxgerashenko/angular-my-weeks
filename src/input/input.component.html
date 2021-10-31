@@ -1,3 +1,7 @@
 <p>
-  <input [(ngModel)]="age" type="number" />
+  <input
+    [(ngModel)]="age"
+    (ngModelChange)="onAgeChange($event)"
+    type="number"
+  />
 </p>

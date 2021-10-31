@@ -1,3 +1,3 @@
 <app-version></app-version>
-<app-input></app-input>
-<app-weeks-grid></app-weeks-grid>
+<app-input (ageChange)="onAgeChange($event)"></app-input>
+<app-weeks-grid [age]="age"></app-weeks-grid>

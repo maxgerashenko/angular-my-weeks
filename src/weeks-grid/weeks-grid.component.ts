@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 const AVERAGE_AGE = 85;
 const WEEKS_IN_YEAR = 52;
@@ -9,14 +9,23 @@ const WEEKS_IN_YEAR = 52;
   styleUrls: ['./weeks-grid.component.css'],
 })
 export class WeeksGridComponent implements OnInit {
+  @Input() age;
+  @Input() average = AVERAGE_AGE;
+
+  get ageInWeeks() {
+    return this.age * WEEKS_IN_YEAR;
+  }
+
+  get averageAgeInWeeks() {
+    return this.average * WEEKS_IN_YEAR;
+  }
+
   weeks = [];
-  totalAge = AVERAGE_AGE * WEEKS_IN_YEAR;
-  age = 30 * WEEKS_IN_YEAR;
 
   constructor() {}
 
   ngOnInit() {
-    for (let i = 1; i <= this.totalAge; i++) {
+    for (let i = 1; i <= this.averageAgeInWeeks; i++) {
       this.weeks.push(i);
     }
   }
