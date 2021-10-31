@@ -7,6 +7,7 @@ import { HelloComponent } from './hello.component';
 import { WeeksGridModule } from '../weeks-grid/weeks-grid.module';
 import { VersionModule } from '../version/version.module';
 import { InputModule } from '../input/input.module';
+import { ENVIROMENT, getEnviroment } from '../environments/provider';
 
 @NgModule({
   imports: [
@@ -18,5 +19,6 @@ import { InputModule } from '../input/input.module';
   ],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],
+  providers: [{ provide: ENVIROMENT, useFactory: getEnviroment }],
 })
 export class AppModule {}
