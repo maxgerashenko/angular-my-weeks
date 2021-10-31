@@ -5,9 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { WeeksGridModule } from '../weeks-grid/weeks-grid.module';
+import { VersionModule } from '../version/version.module';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, WeeksGridModule],
+  imports: [BrowserModule, FormsModule, WeeksGridModule, VersionModule],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],
 })
