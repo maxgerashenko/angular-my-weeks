@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-const AVERAGE_AGE = 85;
+const AVERAGE_AGE = 65;
 const WEEKS_IN_YEAR = 52;
 
 @Component({
